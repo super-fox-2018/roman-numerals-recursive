@@ -20,9 +20,9 @@ function to_roman (num) {
       if(num >= objRoman[key]) {
         num -= objRoman[key];
         roman += [key];
-        return to_roman(num);
+        return roman + to_roman(num);
       }
-      else {
+      else if(num == 0){
         return roman;
       }
     }
